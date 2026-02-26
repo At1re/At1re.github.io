@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Gamma Epsilon | Pi Kappa Alpha | USU</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .events-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start; }
+    .event-full {
+      display: flex; gap: 1.8rem; align-items: flex-start;
+      padding: 1.8rem 0; border-bottom: 1px solid var(--border);
+      transition: background var(--transition);
+    }
+    .event-full:first-child { padding-top: 0; }
+    .event-full:last-child { border-bottom: none; }
+    .event-full:hover { background: rgba(245,237,216,0.45); margin: 0 -1.5rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .event-badge-lg { flex-shrink:0; width:72px; background:var(--garnet); text-align:center; padding:0.7rem 0; }
+    .event-badge-lg .mo { font-family:'Cinzel',serif; font-size:0.55rem; font-weight:700; letter-spacing:0.12em; color:var(--gold-pale); text-transform:uppercase; display:block; }
+    .event-badge-lg .dy { font-family:'Cinzel',serif; font-size:2.1rem; font-weight:900; color:var(--cream); line-height:1; display:block; }
+    .event-badge-lg .yr { font-family:'Cinzel',serif; font-size:0.5rem; letter-spacing:0.1em; color:rgba(240,217,138,0.4); display:block; }
+    .event-full-title { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; color:var(--garnet-dark); margin-bottom:0.25rem; }
+    .event-full-body { font-size:0.93rem; line-height:1.8; color:var(--text-mid); margin-top:0.4rem; }
+    .mini-card { padding:1.3rem; background:var(--off-white); border:1px solid var(--border); margin-bottom:1rem; transition:background var(--transition); }
+    .mini-card:hover { background:var(--parchment); }
+    .mini-card-label { font-family:'Cinzel',serif; font-size:0.55rem; font-weight:700; letter-spacing:0.18em; color:var(--gold); text-transform:uppercase; margin-bottom:0.4rem; }
+    .mini-card-title { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--garnet-dark); margin-bottom:0.3rem; }
+    .mini-card p { font-size:0.85rem; line-height:1.65; color:var(--text-mid); }
+    @media (max-width:900px) { .events-layout { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="page-banner" data-ghost="EVENTS">
+    <div class="page-banner-inner">
+      <div class="page-banner-label">Chapter Life</div>
+      <h1>Events</h1>
+      <p>What we're up to — brotherhood, service, philanthropy &amp; athletics</p>
+      <div class="banner-rule"></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="events-layout">
+
+        <div>
+          <div class="sec-hd fade-in"><h2>Spring 2025 Calendar</h2></div>
+
+          <div class="fade-in">
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">Mar</span><span class="dy">1</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">Founders Day Celebration</div>
+                <div class="event-meta">Annual Tradition · Chapter-Wide · Formal Dinner</div>
+                <div class="event-full-body">On March 1st, 1868, Pi Kappa Alpha was founded in Room 47 of West Range at the University of Virginia. Every year we honor that legacy with a formal dinner, brotherhood ceremony, and a recommitment to the values that define our fraternity. This is our most sacred tradition — a night that belongs to every Pike, past and present.</div>
+              </div>
+            </div>
+
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">Mar</span><span class="dy">15</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">Spring Rush Kickoff</div>
+                <div class="event-meta">Recruitment · Open to All Men at USU</div>
+                <div class="event-full-body">Come meet the brothers of Gamma Epsilon. Whether you're a freshman finding your footing or an upperclassman ready for something more — our doors are open. No pressure, no obligation. Just brotherhood, good food, and a real look at what PIKE is about.</div>
+              </div>
+            </div>
+
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">Mar</span><span class="dy">22</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">Community Service Day</div>
+                <div class="event-meta">Service · Cache Valley · All Brothers</div>
+                <div class="event-full-body">Brothers volunteer across Logan and Cache Valley in our quarterly service day. Projects include park cleanups, food bank volunteering, and neighborhood service. We believe in giving back to the community that gives so much to us.</div>
+              </div>
+            </div>
+
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">Apr</span><span class="dy">5</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">Philanthropy Week</div>
+                <div class="event-meta">Campus-Wide · Multiple Days · Greek Competition</div>
+                <div class="event-full-body">Our signature week of philanthropy brings together the entire USU Greek community for competitions, fundraisers, and community events — all benefiting our chapter's charity partner. Past years have featured wiffle ball tournaments, obstacle courses, and auctions.</div>
+              </div>
+            </div>
+
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">Apr</span><span class="dy">12</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">Rush Round 2 — Brotherhood Night</div>
+                <div class="event-meta">Recruitment · Invite Only</div>
+                <div class="event-full-body">Second round of Spring Rush. Rushees who attended the kickoff get invited to a smaller, more personal brotherhood night — a chance to connect with individual brothers and see what daily life in Gamma Epsilon really looks like.</div>
+              </div>
+            </div>
+
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">Apr</span><span class="dy">19</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">USU Intramural Championships</div>
+                <div class="event-meta">Athletics · Spring Playoffs</div>
+                <div class="event-full-body">PIKE competes for intramural titles across multiple sports. Brotherhood is forged on the field. Come cheer on your brothers as we compete for another championship banner. Friends and family welcome.</div>
+              </div>
+            </div>
+
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">May</span><span class="dy">3</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">End of Year Banquet</div>
+                <div class="event-meta">Formal Event · Black Tie · Brothers &amp; Guests</div>
+                <div class="event-full-body">A formal dinner celebrating the accomplishments of our chapter over the past academic year. Awards are presented, seniors are honored, and the full brotherhood comes together one last time before summer. One of the best nights of the year.</div>
+              </div>
+            </div>
+
+            <div class="event-full">
+              <div class="event-badge-lg"><span class="mo">May</span><span class="dy">10</span><span class="yr">2025</span></div>
+              <div>
+                <div class="event-full-title">New Member Initiation</div>
+                <div class="event-meta">Brotherhood · Chapter-Wide · Sacred Ceremony</div>
+                <div class="event-full-body">We welcome our newest class of brothers into Gamma Epsilon through Pi Kappa Alpha's initiation ceremony. A milestone that marks the beginning of a lifetime of brotherhood. Congratulations to the incoming class.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <div class="sec-hd fade-in"><h2>Recurring Chapter Life</h2></div>
+          <div class="fade-in">
+            <div class="mini-card">
+              <div class="mini-card-label">Weekly</div>
+              <div class="mini-card-title">Chapter Meetings</div>
+              <p>Brotherhood meetings where we handle chapter business, hear officer updates, and stay connected as a full chapter.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-label">Every Semester</div>
+              <div class="mini-card-title">Academic Check-Ins</div>
+              <p>Brothers meet with the Scholarship Chair to review academic standing and set goals. PIKE takes scholarship seriously.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-label">Ongoing</div>
+              <div class="mini-card-title">Intramural Sports</div>
+              <p>PIKE fields competitive teams in flag football, basketball, volleyball, and more every semester.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-label">Quarterly</div>
+              <div class="mini-card-title">Community Service</div>
+              <p>Organized service events across Logan and Cache Valley throughout the year.</p>
+            </div>
+          </div>
+
+          <div class="info-box fade-in" style="margin-top:1.5rem; border-left-color:var(--gold);">
+            <div class="info-box-label">Stay Updated</div>
+            <p style="font-size:0.9rem;line-height:1.7;color:var(--text-mid);margin-bottom:1rem;">Follow us on Instagram for real-time event updates, photos, and announcements. All events are posted to social first.</p>
+            <a class="btn btn-garnet btn-sm" href="connect.html">Follow Us →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <div class="cta-eyebrow">Come See It For Yourself</div>
+      <h2>Rush — Meet the Brotherhood</h2>
+      <p>No better way to understand what Gamma Epsilon is about than showing up and meeting the brothers.</p>
+      <div class="cta-btns"><a class="btn btn-garnet btn-lg" href="rush.html">Rush PIKE</a></div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

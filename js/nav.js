@@ -1,71 +1,48 @@
-/* ═══════════════════════════════════════════════════
-   PI KAPPA ALPHA — Gamma Epsilon
-   Shared Nav + UI Scripts
-   ═══════════════════════════════════════════════════ */
-
+/* Pi Kappa Alpha — Gamma Epsilon | Shared JS */
 (function () {
   'use strict';
 
-  /* ── Active nav link highlighting ── */
-  const rawPath = window.location.pathname.split('/').pop() || 'index.html';
-  const path = (rawPath === 'index.html' || rawPath === '') ? 'home.html' : rawPath;
-  document.querySelectorAll('.nav-link[data-page]').forEach(link => {
-    if (link.dataset.page === path) link.classList.add('active');
+  /* Active nav */
+  const page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('[data-page]').forEach(el => {
+    if (el.dataset.page === page) el.classList.add('active');
   });
 
-  /* ── Hamburger / Mobile Menu ── */
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobile-nav');
-
-  if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
-      const spans = hamburger.querySelectorAll('span');
-      if (isOpen) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-      } else {
-        spans[0].style.transform = '';
-        spans[1].style.opacity = '';
-        spans[2].style.transform = '';
-      }
-    });
-
-    /* Close mobile nav on link click */
-    mobileNav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-        const spans = hamburger.querySelectorAll('span');
-        spans[0].style.transform = '';
-        spans[1].style.opacity = '';
-        spans[2].style.transform = '';
-      });
-    });
-  }
-
-  /* ── Sticky header shadow on scroll ── */
+  /* Scroll shadow */
   const header = document.querySelector('header');
   if (header) {
-    window.addEventListener('scroll', () => {
-      header.style.boxShadow = window.scrollY > 10
-        ? '0 4px 30px rgba(107,26,42,0.18)'
-        : '0 2px 12px rgba(107,26,42,0.1)';
-    }, { passive: true });
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
-  /* ── Fade-in on scroll ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  /* Hamburger */
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobile-nav');
+  if (ham && mob) {
+    ham.addEventListener('click', () => {
+      const open = mob.classList.toggle('open');
+      ham.setAttribute('aria-expanded', open);
+      const [s1,,s3] = ham.querySelectorAll('span');
+      const s2 = ham.querySelectorAll('span')[1];
+      if (open) {
+        s1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+        s2.style.opacity = '0';
+        s3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        [s1, s2, s3].forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mob.classList.remove('open');
+      ham.setAttribute('aria-expanded', false);
+      ham.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    }));
+  }
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
+  /* Scroll fade-in */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 })();
