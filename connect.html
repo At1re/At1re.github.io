@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect | Gamma Epsilon Chapter | Pi Kappa Alpha</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    .contact-card { border: 1px solid var(--border); border-top: 3px solid var(--garnet); padding: 1.8rem; background: var(--parchment); }
+    .contact-card-label { font-family: 'Cinzel', serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; color: var(--garnet); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .contact-card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; }
+    .contact-card p { font-size: 0.9rem; line-height: 1.7; color: var(--text-mid); margin-bottom: 1rem; }
+    @media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="page-banner">
+    <div class="page-banner-content">
+      <h1>Connect With Us</h1>
+      <p>Follow the chapter and stay in the loop</p>
+      <div class="banner-rule"></div>
+    </div>
+  </div>
+<!-----------------------------------CONTENT BELOW------------------------------------------------------>
+
+
+    <div class="section-hd gap-top fade-in"><h2>Get in Touch</h2></div>
+    <div class="contact-grid fade-in">
+      <div class="contact-card">
+        <div class="contact-card-label">Recruitment</div>
+        <div class="contact-card-title">Rush & Membership</div>
+        <p>Interested in joining Gamma Epsilon? Reach out to our Recruitment Chair directly, or attend a Rush event. We'd love to meet you.</p>
+        <a class="btn btn-garnet btn-sm" href="rush.html">Rush Info →</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">General</div>
+        <div class="contact-card-title">Chapter President</div>
+        <p>For general inquiries about the chapter, events, or partnership opportunities, reach out to our chapter president or message us on Instagram.</p>
+        <a class="btn btn-outline-garnet btn-sm" href="https://www.instagram.com" target="_blank">Message Us →</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">Alumni</div>
+        <div class="contact-card-title">Stay Connected</div>
+        <p>Are you a Gamma Epsilon alumnus? We'd love to stay in touch. Reach out to reconnect with the chapter and stay plugged into what's happening at USU.</p>
+        <a class="btn btn-outline-garnet btn-sm" href="mailto:pikeusu@gmail.com">Email Us →</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">National</div>
+        <div class="contact-card-title">Pi Kappa Alpha HQ</div>
+        <p>For information about Pi Kappa Alpha nationally — history, resources, or chapter directory — visit the national Pi Kappa Alpha website.</p>
+        <a class="btn btn-outline-garnet btn-sm" href="https://pikes.org" target="_blank">pikes.org ↗</a>
+      </div>
+    </div>
+
+    <!-- USU Greek Life link -->
+    <div class="info-box fade-in" style="max-width: 700px;">
+      <div class="info-box-label">Utah State University</div>
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <div style="font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:700; color:var(--text); margin-bottom:0.2rem;">USU Fraternity &amp; Sorority Life</div>
+          <div style="font-size:0.88rem; font-style:italic; color:var(--text-light);">Utah State University · Logan, Utah 84322</div>
+        </div>
+        <a class="btn btn-outline-garnet btn-sm" href="https://usu.edu" target="_blank">usu.edu ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrap">
+
+    <div class="section-hd fade-in"><h2>Social Media</h2></div>
+    <div class="social-grid fade-in">
+      <a class="social-card" href="#" target="_blank" rel="noopener">
+        <span class="s-icon">📸</span>
+        <div class="s-platform">Instagram</div>
+        <div class="s-handle">@pikeUSU</div>
+      </a>
+      <a class="social-card" href="#" target="_blank" rel="noopener">
+        <span class="s-icon">▶</span>
+        <div class="s-platform">TikTok</div>
+        <div class="s-handle">@gammaepsilonpike</div>
+      </a>
+      <a class="social-card" href="#" target="_blank" rel="noopener">
+        <span class="s-icon">𝕏</span>
+        <div class="s-platform">Twitter / X</div>
+        <div class="s-handle">@PIKEgammaEpsilon</div>
+      </a>
+      <a class="social-card" href="#" target="_blank" rel="noopener">
+        <span class="s-icon">👥</span>
+        <div class="s-platform">Facebook</div>
+        <div class="s-handle">Pi Kappa Alpha — USU</div>
+      </a>
+    </div>
+  <div class="rush-strip">
+    <div class="rush-strip-inner">
+      <h2>Ready to Become a Pike?</h2>
+      <p>The best way to connect with Gamma Epsilon is to show up. Come to Rush and meet the brotherhood.</p>
+      <div class="btns">
+        <a class="btn btn-garnet btn-lg" href="rush.html">Rush PIKE</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

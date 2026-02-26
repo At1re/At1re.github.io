@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Gamma Epsilon Chapter | Pi Kappa Alpha</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .color-swatches { display: flex; gap: 0.8rem; margin-top: 0.8rem; align-items: center; }
+    .swatch { width: 44px; height: 44px; border: 1px solid var(--border); }
+    .swatch-label { font-size: 0.82rem; font-style: italic; color: var(--text-light); margin-top: 0.4rem; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="page-banner">
+    <div class="page-banner-content">
+      <h1>About Gamma Epsilon</h1>
+      <p>Pi Kappa Alpha at Utah State University</p>
+      <div class="banner-rule"></div>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-hd fade-in"><h2>Our Brotherhood</h2></div>
+        <div class="prose fade-in">
+          <p>The <strong>Gamma Epsilon Chapter</strong> of Pi Kappa Alpha at Utah State University is home to a brotherhood built on the pillars of Scholarship, Leadership, Athletics, and Gentlemanly Conduct. We hold ourselves to the highest standard on campus and in our community.</p>
+          <p>Our brothers are scholars, athletes, leaders, and lifelong friends. From Aggie athletics to community service, Gamma Epsilon is active in every corner of Utah State campus life — in the classroom, on the field, in student government, and in service to Cache Valley.</p>
+          <p>We carry the legacy of Pi Kappa Alpha — founded on <strong>March 1, 1868</strong> at the University of Virginia — and honor that tradition every single day in Logan, Utah. As members of one of North America's largest and most respected fraternities, Gamma Epsilon brothers join a network of over 310,000 lifetime initiates who have gone on to lead in business, government, athletics, and the arts.</p>
+          <p>Brotherhood at Gamma Epsilon isn't just a word — it's a commitment. We push each other to be better, hold each other accountable, and celebrate each other's wins. When you join PIKE, you don't just gain a fraternity. You gain a family.</p>
+        </div>
+
+        <div class="gap-top fade-in">
+          <div class="section-hd"><h2>Chapter at a Glance</h2></div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+            <div class="info-box" style="border-left-color: var(--gold);">
+              <div class="info-box-label">Founded</div>
+              <div style="font-family:'Cinzel',serif; font-size:1.4rem; font-weight:900; color:var(--garnet-dark);">1868</div>
+              <div style="font-size:0.82rem; color:var(--text-light); font-style:italic;">March 1 · U.Va.</div>
+            </div>
+            <div class="info-box" style="border-left-color: var(--gold);">
+              <div class="info-box-label">University</div>
+              <div style="font-family:'Cinzel',serif; font-size:1rem; font-weight:900; color:var(--garnet-dark); line-height:1.2;">Utah State</div>
+              <div style="font-size:0.82rem; color:var(--text-light); font-style:italic;">Logan, Utah</div>
+            </div>
+            <div class="info-box" style="border-left-color: var(--gold);">
+              <div class="info-box-label">Chapter</div>
+              <div style="font-family:'Cinzel',serif; font-size:1.4rem; font-weight:900; color:var(--garnet-dark);">Γ Ε</div>
+              <div style="font-size:0.82rem; color:var(--text-light); font-style:italic;">Gamma Epsilon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-hd fade-in"><h2>Our Four Pillars</h2></div>
+        <div class="pillar-grid fade-in" style="grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="pillar"><span class="pillar-icon">📖</span><span class="pillar-name">Scholarship</span></div>
+          <div class="pillar"><span class="pillar-icon">👑</span><span class="pillar-name">Leadership</span></div>
+          <div class="pillar"><span class="pillar-icon">🏅</span><span class="pillar-name">Athletics</span></div>
+          <div class="pillar"><span class="pillar-icon">🤝</span><span class="pillar-name">Conduct</span></div>
+        </div>
+
+        <div class="info-box gap-top fade-in">
+          <div class="info-box-label">Chapter Colors</div>
+          <div class="color-swatches">
+            <div>
+              <div class="swatch" style="background:#6B1A2A;"></div>
+              <div class="swatch-label">Garnet</div>
+            </div>
+            <div style="color:var(--text-light); font-size:1.2rem; margin-top:0.5rem;">&amp;</div>
+            <div>
+              <div class="swatch" style="background:#B8962E;"></div>
+              <div class="swatch-label">Old Gold</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bq gap-top fade-in">
+          <div class="bq-cite">Pi Kappa Alpha Motto</div>
+          <div class="bq-text:'Cormorant Garamond',serif; font-size:1.15rem; font-style:italic; color:var(--text-mid);">"Once a Pike, always a Pike."</div>
+        </div>
+
+        <div class="info-box gap-top-sm fade-in">
+          <div class="info-box-label">Chapter Foundation</div>
+          <div class="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-style:italic; color:var(--text-mid);">Friendship, Love &amp; Truth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rush-strip">
+    <div class="rush-strip-inner">
+      <h2>Interested in Joining?</h2>
+      <p>Learn what it takes to become a brother of Gamma Epsilon — and start the journey toward a brotherhood that lasts a lifetime.</p>
+      <div class="btns">
+        <a class="btn btn-garnet btn-lg" href="rush.html">Rush PIKE</a>
+        <a class="btn btn-outline-gold btn-lg" href="history.html">Our History</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
