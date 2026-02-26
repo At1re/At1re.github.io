@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gamma Epsilon Chapter | Pi Kappa Alpha | Utah State University</title>
+  <meta name="description" content="The Gamma Epsilon Chapter of Pi Kappa Alpha at Utah State University. Scholarship, Leadership, Athletics, Gentlemen." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Page-specific: Hero ── */
+/* FOR BACKGROUND PHOTO */
+/*
+    .hero {
+      position: relative;
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/fall25.png") center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+      */
+    
+    .hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }   
+*/
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(184,150,46,0.045) 60px),
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(184,150,46,0.045) 60px);
+    }
+    .hero-radial {
+      position: absolute;
+      width: 70vw; height: 70vw;
+      max-width: 700px; max-height: 700px;
+      background: radial-gradient(circle, rgba(107,26,42,0.55) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+      animation: heroIn 0.9s ease both;
+    }
+    @keyframes heroIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-crest {
+      width: 190px; height: auto;
+      margin: 0 auto 2.5rem;
+      animation: float 6s ease-in-out infinite;
+      filter: drop-shadow(0 18px 40px rgba(0,0,0,0.45));
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.38em;
+      color: var(--gold); text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 900; letter-spacing: 0.04em;
+      color: var(--cream); line-height: 0.95;
+      margin-bottom: 0.5rem;
+    }
+    .hero-title em { color: var(--gold-light); font-style: normal; }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 300; font-style: italic;
+      color: rgba(255, 223, 119, 0.733); letter-spacing: 0.08em;
+    }
+    .hero-divider {
+      width: 200px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 1.6rem auto;
+    }
+    .hero-motto {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-style: italic;
+      color: rgba(255, 223, 119, 0.733); letter-spacing: 0.1em;
+      margin-bottom: 2.5rem;
+    }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Homepage two-col layout ── */
+    .home-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .home-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Fade-in animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER ID -->
+<div id="header-placeholder"></div>
+
+
+
+<!---------------------------------------------------SEPERATE------------------------------------------------------ !>
+  <!- HERO -->
+  <section class="hero" aria-label="Hero">
+    <!--Background Video-->
+    
+    
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="videos/fall25.mp4" type="video/mp4">
+    </video>
+
+    
+
+
+    <div class="hero-grid"></div>
+    <div class="hero-radial"></div>
+    <div class="hero-content">
+
+    <img 
+      class="hero-crest" 
+      src="images/pikecrest.png" 
+      alt="Pi Kappa Alpha Coat of Arms"
+    />
+
+      <p class="hero-eyebrow">Gamma Epsilon · Utah State University</p>
+      <h1 class="hero-title">Pi Kappa<br/><em>Alpha</em></h1>
+      <p class="hero-sub">Founded 1868 · University of Virginia</p>
+      <div class="hero-divider"></div>
+      <p class="hero-motto">"Scholarship. Leadership. Athletics. Gentlemen."</p>
+      <div class="hero-btns">
+        <a class="btn btn-garnet btn-lg" href="rush.html">Rush PIKE</a>
+        <a class="btn btn-outline-gold btn-lg" href="about.html">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT BAND -->
+  <div class="stat-band">
+    <div class="stat-band-inner">
+      <div class="stat-band-item"><span class="num">1868</span><span class="lbl">National Founding</span></div>
+      <div class="stat-band-item"><span class="num">313K+</span><span class="lbl">Lifetime Initiates</span></div>
+      <div class="stat-band-item"><span class="num">225+</span><span class="lbl">Active Chapters</span></div>
+      <div class="stat-band-item"><span class="num">USU</span><span class="lbl">Logan, Utah</span></div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-wrap">
+    <div class="home-grid">
+
+      <!-- LEFT: News -->
+      <div>
+        <div class="section-hd fade-in">
+          <h2>Chapter News</h2>
+       <!--   <a href="events.html">View All Events →</a> -->
+        </div>
+        <div class="card-grid">
+
+          <div class="card fade-in">
+            <div class="card-thumb">
+            <img 
+            class="card-thumb" 
+            src="images/oldheads.jpg" 
+            alt="card-thumb">
+          </div>
+            <div class="card-body">
+              <div class="card-tag">Spring 2025 · Award</div>
+              <div class="card-title">Gamma Epsilon Earns Chapter Excellence Award</div>
+              <div class="card-excerpt">Our chapter was recognized nationally for outstanding operations, brotherhood development, and Improvement Project of the Year.</div>
+            </div>
+
+          </div>
+          <div class="card fade-in">
+            <div class="card-thumb">📚</div>
+            <div class="card-body">
+              <div class="card-tag">Spring 2025 · Academics</div>
+              <div class="card-title">Chapter GPA Exceeds All-Men's Average at USU</div>
+              <div class="card-excerpt">Brothers of Gamma Epsilon continue to lead academically, posting the chapter's strongest GPA in recent memory.</div>
+            </div>
+
+          </div>
+          <div class="card fade-in">
+            <div class="card-thumb">
+            <img
+            class="card-thumb" 
+            src="images/pikefootball.png" 
+            alt="card-thumb">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Fall 2025 · Athletics</div>
+              <div class="card-title">PIKE Wins Intramural Flag Football Championship</div>
+              <div class="card-excerpt">The brothers brought home the title, continuing our tradition of athletic excellence on the USU campus.</div>
+            </div>
+
+          </div>
+          <div class="card fade-in">
+            <div class="card-thumb">          
+            <img
+            class="card-thumb" 
+            src="images/spring25.jpg" 
+            alt="card-thumb">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Fall 2024 · Service</div>
+              <div class="card-title">Philanthropy Week Raises Record Donations</div>
+              <div class="card-excerpt">This fall's philanthropy events brought together the entire Greek community for a week of competition, service, and giving back.</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Events Sidebar -->
+      <div>
+        <div class="section-hd fade-in">
+          <h2>Upcoming Events</h2>
+      <!--    <a href="events.html">Full Calendar →</a> -->
+        </div>
+        <div class="event-list fade-in">
+          <div class="event-row">
+            <div class="event-badge"><span class="event-badge-month">Feb</span><span class="event-badge-day">28</span></div>
+            <div>
+              <div class="event-title">Founders Day</div>
+              <div class="event-meta">Annual Celebration</div>
+              <div class="event-desc">Honoring the founding of Pi Kappa Alpha since 1868.</div>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-badge"><span class="event-badge-month">Mar</span><span class="event-badge-day">4</span></div>
+            <div>
+              <div class="event-title">Intramural Championships</div>
+              <div class="event-meta">Athletics · USU</div>
+              <div class="event-desc">PIKE competes for intramural titles this spring.</div>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-badge"><span class="event-badge-month">Mar</span><span class="event-badge-day">23</span></div>
+            <div>
+              <div class="event-title">Philanthropy Week</div>
+              <div class="event-meta">Campus-Wide</div>
+              <div class="event-desc">Annual charity events and Greek community competitions.</div>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-badge"><span class="event-badge-month">Mar</span><span class="event-badge-day">28</span></div>
+            <div>
+              <div class="event-title">Magic Pike</div>
+              <div class="event-meta">Annual Celebration</div>
+              <div class="event-desc">Experience the tradition and spirit of Gamma Epsilon.</div>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-badge"><span class="event-badge-month">May</span><span class="event-badge-day">3</span></div>
+            <div>
+              <div class="event-title">End of Year Banquet</div>
+              <div class="event-meta">Formal · Black Tie</div>
+              <div class="event-desc">Celebrating the year's best moments with brotherhood.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RUSH CTA STRIP -->
+  <div class="rush-strip">
+    <div class="rush-strip-inner">
+      <h2>🛡&nbsp; Rush Pi Kappa Alpha</h2>
+      <p>Discover what it means to be a Pike at Utah State University. Brotherhood, leadership, and friendships that last a lifetime.</p>
+      <div class="btns">
+        <a class="btn btn-garnet btn-lg" href="rush.html">Start Your Journey</a>
+        <a class="btn btn-outline-gold btn-lg" href="connect.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+<div id="footer-placeholder"></div>
+
+  ** Scripts **
+  <script src="js/nav.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  
+</body>
+</html>
